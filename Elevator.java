@@ -88,4 +88,3 @@ public class Elevator {
             return floor < MIN_FLOOR || floor > MAX_FLOOR;
         }
     }
-}
