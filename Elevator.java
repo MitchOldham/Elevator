@@ -90,9 +90,9 @@ public class Elevator {
         currentFloor--;
         System.out.println("GOING DOWN TO" + currentFloor);
         Thread.sleep(PROCESSING_TIME);
-        }
+    }
 
-        private boolean isInvalidFloor(int floor) {
+    private boolean isInvalidFloor(int floor) {
             return floor < MIN_FLOOR || floor > MAX_FLOOR;
         }
     }
