@@ -41,6 +41,14 @@ public class Elevator {
         System.out.println("Chilling for now");
     }
 
+    public void callElevator(int start, int destination) {
+        if (isInvalidFloor(start) || isInvalidFloor(destination) || start == destination) {
+            System.out.println("INVALID FLOORS. Try again");
+            return;
+        }
+        requestedPathsMap.computeIfAbsent(start, k -> new ArrayList<>()).add(destination);
+    }
+
     private void processFloor(int floor) throws InterruptedException {
         if (currentFloorDestinations[floor]) {
             System.out.println("UN-BOARDING at Floor: " + floor);
